@@ -27,9 +27,7 @@ public class Cliente {
 	public String getSexo() {
 		return sexo;
 	}
-	public void setSexo(String sexo) {
-		this.sexo = sexo;
-	}
+
 	public Integer getIdade() {
 		return idade;
 	}
