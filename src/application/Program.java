@@ -20,6 +20,19 @@ public class Program {
 		List<Hotel>hoteis = new ArrayList<>();
 		Hotel escolhaHotel;
 		
+		
+		// Guaruja - SP
+				hoteis.add(new Hotel(100, " Hotel Ilhas do Caribe", 3, 200, new Endereco("Guaruja - SP", "Av. Guadalajara", 124)));
+				hoteis.add(new Hotel(101, " Ferraretto Guarujá Hotel & Spa", 4, 300, new Endereco("Guaruja - SP", "Rua Mário Ribeiro", 564)));
+				hoteis.add(new Hotel(102, " Sofitel Guarujá Jequitimar", 5, 500, new Endereco("Guaruja - SP", "Av. Marjori Prado", 1100)));
+				
+		// Maceio - AL
+				hoteis.add(new Hotel(200, " Tambaqui Praia Hotel", 3, 200, new Endereco("Maceio - AL", "Rua Engenheiro Mário de Gusmão", 176)));
+				hoteis.add(new Hotel(201, " Hotel Brisa Suites", 4, 300, new Endereco("Maceio - AL", "Av. Dr. Antônio Gouveia", 953)));
+				hoteis.add(new Hotel(202, " Ritz Lagoa Da Anta", 5, 500, new Endereco("Maceio - AL", "Av. Brigadeiro Eduardo Gomes de Brito", 546)));
+		
+		
+				
 		int op;
 		System.out.println("AGENCIA DE VIAGENS -> JV Viagens <-\n\n");
 		System.out.println("Pacote de Viagens");
@@ -33,14 +46,14 @@ public class Program {
 		case 1:
 			for (Hotel hotel : hoteis) {
 				if(hotel.endereco.getCidade() == "Guaruja - SP") {
-					System.out.println(hotel.getId()+hotel.getNome()+" - "+hotel.getEstrelas());
+					System.out.println("ID "+hotel.getId()+" - "+hotel.getNome()+" - "+hotel.getEstrelas()+" estrelas"+" - Valor da diaria R$ "+String.format("%.2f", hotel.getValorDiaria()));
 				}
 			}
 			break;
 		case 2:
 			for (Hotel hotel : hoteis) {
 				if (hotel.endereco.getCidade() == "Maceio - AL") {
-					System.out.println(hotel.getId()+hotel.getNome()+" - "+hotel.getEstrelas());
+					System.out.println("ID "+hotel.getId()+" - "+hotel.getNome()+" - "+hotel.getEstrelas()+" estrelas"+" - Valor da diaria R$ "+String.format("%.2f", hotel.getValorDiaria()));
 				}
 			}
 			break;
@@ -50,41 +63,7 @@ public class Program {
 		default:
 			break;
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		// Guaruja - SP
-		hoteis.add(new Hotel(100, "Hotel Ilhas do Caribe", 3, 200, new Endereco("Guaruja - SP", "Av. Guadalajara", 124)));
-		hoteis.add(new Hotel(101, "Ferraretto Guarujá Hotel & Spa", 4, 300, new Endereco("Guaruja - SP", "Rua Mário Ribeiro", 564)));
-		hoteis.add(new Hotel(102, "Sofitel Guarujá Jequitimar", 5, 500, new Endereco("Guaruja - SP", "Av. Marjori Prado", 1100)));
-		
-		// Maceio - AL
-		hoteis.add(new Hotel(200, "Tambaqui Praia Hotel", 3, 200, new Endereco("Maceio - AL", "Rua Engenheiro Mário de Gusmão", 176)));
-		hoteis.add(new Hotel(201, "Hotel Brisa Suites", 4, 300, new Endereco("Maceio - AL", "Av. Dr. Antônio Gouveia", 953)));
-		hoteis.add(new Hotel(202, "Ritz Lagoa Da Anta", 5, 500, new Endereco("Maceio - AL", "Av. Brigadeiro Eduardo Gomes de Brito", 546)));
-		
-		
-		
+
 		leia.close();
 	}
 
