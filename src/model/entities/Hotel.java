@@ -3,21 +3,31 @@ package model.entities;
 
 public class Hotel {
 
+	
+	private int id;
 	private String nome;
 	private int estrelas;
 	private Double valorDiaria;
-	private Endereco endereco;
+	public Endereco endereco;
 	
 	public Hotel() {
 	}
 
-	public Hotel(String nome, int estrelas, double valorDiaria, Endereco endereco) {
+	public Hotel(int id, String nome, int estrelas, double valorDiaria, Endereco endereco) {
+		this.id = id;
 		this.nome = nome;
 		this.estrelas = estrelas;
 		this.valorDiaria = valorDiaria;
 		this.endereco = endereco;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getNome() {
 		return nome;
 	}
