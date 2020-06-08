@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
+import model.entities.Cliente;
 import model.entities.Endereco;
 import model.entities.Hotel;
 
@@ -18,7 +19,9 @@ public class Program {
 		
 		
 		List<Hotel>hoteis = new ArrayList<>();
-		Hotel escolhaHotel;
+		@SuppressWarnings("unused")
+		List<Cliente>clientes = new ArrayList<>();
+		
 		
 		
 		// Guaruja - SP
@@ -30,6 +33,7 @@ public class Program {
 				hoteis.add(new Hotel(200, " Tambaqui Praia Hotel", 3, 200, new Endereco("Maceio - AL", "Rua Engenheiro Mário de Gusmão", 176)));
 				hoteis.add(new Hotel(201, " Hotel Brisa Suites", 4, 300, new Endereco("Maceio - AL", "Av. Dr. Antônio Gouveia", 953)));
 				hoteis.add(new Hotel(202, " Ritz Lagoa Da Anta", 5, 500, new Endereco("Maceio - AL", "Av. Brigadeiro Eduardo Gomes de Brito", 546)));
+		
 		
 		
 				
@@ -63,6 +67,40 @@ public class Program {
 		default:
 			break;
 		}
+		
+		System.out.print("Digite o ID do hotel escolhido -> ");
+		int x = leia.nextInt();
+		
+		System.out.print("Realizar quantas reservas ?");
+		int n = leia.nextInt();
+		
+		for (int i = 0; i < n; i++) {
+			System.out.println("RESERVA # " + i + " :");
+			System.out.print("Nome: ");
+			leia.nextLine();
+			String nome = leia.nextLine();
+			System.out.print("Sexo: ");
+			String sexo = leia.next();
+			System.out.print("Idade: ");
+			int idade = leia.nextInt();
+			System.out.print("Contato (telefone/celular): ");
+			double cel = leia.nextDouble();
+			System.out.print("Endereco: ");
+			leia.nextLine();
+			String rua = leia.nextLine();
+			System.out.println("Numero: ");
+			int numero = leia.nextInt();
+			clientes.add(new Cliente(nome, sexo, idade, cel, new Endereco(rua, numero)));
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 		leia.close();
 	}
