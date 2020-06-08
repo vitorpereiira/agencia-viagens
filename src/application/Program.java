@@ -71,10 +71,10 @@ public class Program {
 		System.out.print("Digite o ID do hotel escolhido -> ");
 		int x = leia.nextInt();
 		
-		System.out.print("Realizar quantas reservas ?");
+		System.out.print("Realizar quantas reservas? \n");
 		int n = leia.nextInt();
 		
-		for (int i = 0; i < n; i++) {
+		for (int i = 1; i < n; i++) {
 			System.out.println("RESERVA # " + i + " :");
 			System.out.print("Nome: ");
 			leia.nextLine();
@@ -88,7 +88,7 @@ public class Program {
 			System.out.print("Endereco: ");
 			leia.nextLine();
 			String rua = leia.nextLine();
-			System.out.println("Numero: ");
+			System.out.print("Numero: ");
 			int numero = leia.nextInt();
 			clientes.add(new Cliente(nome, sexo, idade, cel, new Endereco(rua, numero)));
 		}
