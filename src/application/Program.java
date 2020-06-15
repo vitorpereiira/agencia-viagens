@@ -74,7 +74,7 @@ public class Program {
 		System.out.print("Realizar quantas reservas? \n");
 		int n = leia.nextInt();
 		
-		for (int i = 1; i < n; i++) {
+		for (int i = 0; i < n; i++) {
 			System.out.println("RESERVA # " + i + " :");
 			System.out.print("Nome: ");
 			leia.nextLine();
